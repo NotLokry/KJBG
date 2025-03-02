@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
-    fetch("/img/fotkes/list.json").then(res => res.json()).then(json =>{
+    fetch("/KJBG/img/fotkes/list.json").then(res => res.json()).then(json =>{
         const container = document.getElementById("main_container");
         for (let i = 0; i < json.length; i++) {
             const img = document.createElement("img");
-            img.src = "/img/fotkes/"+json[i];
+            img.src = "/KJBG/img/fotkes/"+json[i];
             img.classList.add("photobooth_photo");
             img.style.left = `${Math.random() * (container.clientWidth - 100)}px`;
             img.style.top = `${Math.random() * 10000}px`;
